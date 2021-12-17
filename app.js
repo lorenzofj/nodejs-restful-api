@@ -12,9 +12,11 @@ app.use(bodyParser.json());
 
 //Import Routes
 const mobsRoute = require('./routes/mobs');
+const itemsRoute = require('./routes/items');
 
 //Middlewares
 app.use('/mobs', mobsRoute);
+app.use('/items', itemsRoute);
 
 //Connection to DB
 mongoose.connect(process.env.DB_CONNECTION, () => {
