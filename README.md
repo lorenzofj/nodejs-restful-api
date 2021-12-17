@@ -13,6 +13,12 @@ To install all the dependencies.
 Runs the app in development mode.  
 Open http://localhost:8080 to view it in the browser.
 
+Lastly create a .env file in the project directory and paste this code:
+
+```
+DB_CONNECTION=mongodb+srv://awesome-guest:Guest-restapi@rest-api-db.2pxdn.mongodb.net/rest-api-db?retryWrites=true&w=majority
+```
+
 ## API Reference
 
 #### Get all Mobs
