@@ -66,3 +66,33 @@ DB_CONNECTION=mongodb+srv://awesome-guest:Guest-restapi@rest-api-db.2pxdn.mongod
 ```http
   http://localhost:8080/items/rarity=Commmon
 ```
+
+## Biomes
+
+#### Get all Biomes
+
+```http
+  GET /biomes
+```
+
+#### Get specific Biome
+
+| Parameter      | Type     | Description                                                  |
+| :------------- | :------- | :------------------------------------------------------------|
+| `name`         | `string` |**Optional**. Name of the item.                               |
+| `rarity`       | `string` |**Optional**. Common, Uncommon, Rare, Epic.                   |
+| `temperature`  | `number` |**Optional**. 0, 1, 2.                                        |
+| `structures`   | `array`  |**Optional**. Villages, Igloo, etc.                           |
+| `blocks`       | `array`  |**Optional**. Grass, Sand, Ores, etc.                         |
+| `appearance`   | `string` |**Optional**. Image of the biome(url).                        |
+
+#### Example query
+
+```http
+  http://localhost:8080/biomes/blocks=Soul Sand
+```
+
+## Thing to improve in the project
+
+- Filter by multiple parameters.
+- UI.
