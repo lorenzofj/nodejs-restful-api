@@ -36,7 +36,7 @@ router.get('/rarity=:itemRarity', async (req, res) => {
 //Get a specific item by renewable
 router.get('/renewable=:itemRenewable', async (req, res) => {
     try{
-        const item = await Item.find({rarity: req.params.itemRenewable});
+        const item = await Item.find({renewable: req.params.itemRenewable});
         res.json(item);
     }
     catch(error){
@@ -47,7 +47,7 @@ router.get('/renewable=:itemRenewable', async (req, res) => {
 //Get a specific item by durability
 router.get('/durability=:itemDurability', async (req, res) => {
     try{
-        const item = await Item.find({rarity: req.params.itemDurability});
+        const item = await Item.find({durability: req.params.itemDurability});
         res.json(item);
     }
     catch(error){
